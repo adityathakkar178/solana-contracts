@@ -6,14 +6,14 @@ use {
 use crate::instructions::{
     create::{create_token, CreateTokenArgs},
     mint::{mint_token, MintSplArgs},
-    transfer::{transfer_tokens, TrasnferTokensArgs},
+    transfer::{transfer_tokens, TransferTokensArgs},
 };
 
 #[derive(BorshSerialize, BorshDeserialize, Debug)]
 enum MyInstruction {
     Create(CreateTokenArgs),
     MintSpl(MintSplArgs),
-    TransferTokens(TrasnferTokensArgs),
+    TransferTokens(TransferTokensArgs),
 }
 
 pub fn process_instruction(
